@@ -52,50 +52,49 @@ h3 {
 }
 #adoption {
   height: auto;
-}
-#adoption > .row {
-  height: auto;
   padding: 15px;
 }
 #adoption p {
   font-size: 20px;
 }
-#adopthero {
+#adoption > div:first-of-type > div {
+  background: rgba(68, 102, 0, 1);
+  width: 240px;
+  height: 40px;
+  margin: 50px auto 0 auto;
+}
+#sheltersearch {
   border: 5px solid rgba(68, 102, 0, 1);
   width: 200px;
+  height: 40px;
   color: rgba(68, 102, 0, 1);
   text-align: center;
-  margin-top: 100px;
   font-size: 20px;
 }
-#dogs {
-  display: inline-flex;
+#sheltersearchgo {
+  background: rgba(68, 102, 0, 1);
+  color: white;
+  text-align: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#shelters {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   /*justify-content: center;*/
   align-content: center;
   margin: 20px 0;
 }
-.available {
-  background-color: rgba(68, 102, 0, 1);
+.shelter {
+  background: rgba(68, 102, 0, 1);
   height: auto;
-  width: 220px;
+  width: 300px;
   padding: 5px;
-  overflow: hidden;
-  text-align: center;
-  margin: 0 auto;
-}
-.available > div {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-.available h2 {
-  background-color: white;
-}
-.available span {
+  margin: 5px auto;
   color: white;
-  font-size: 20px;
+  border-radius: 5px;
+  text-align: left;
 }
 .clearfix:after {
   visibility: hidden;
@@ -159,7 +158,7 @@ footer p {
   color: rgb(150, 150, 150);
   text-align: center;
 }
-input {
+footer input {
   margin: 10px 0px 0px 10px;
 }
 @media screen and (max-width: 367px) {
@@ -214,17 +213,9 @@ input {
   .available {
     width: 90%;
   }
-  #dogs {
-    padding-left: 5%;
-    margin: 15px 0;
-  }
 }
 @media screen and (min-width: 1027px) and (max-width: 1199px) {
-  #adoption > .row {
-    padding: 15px;
-  }
-  #dogs {
-    padding-left: 3%;
+  #shelters {
     margin: 20px 0;
   }
 }
@@ -232,8 +223,7 @@ input {
   #adoption > .row {
     padding: 15px;
   }
-  #dogs {
-    padding-left: 5%;
+  #shelters {
     margin: 20px 0;
   }
 }
