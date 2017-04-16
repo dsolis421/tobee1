@@ -99,6 +99,7 @@ h3 {
   color: white;
   border-radius: 5px;
   text-align: left;
+  cursor: pointer;
 }
 .shelterdetail {
   background: rgba(68, 102, 0, 1);
