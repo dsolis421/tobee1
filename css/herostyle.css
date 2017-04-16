@@ -53,13 +53,18 @@ h3 {
 #adoption {
   height: auto;
   padding: 15px;
+  text-align: center;
 }
 #adoption p {
   font-size: 20px;
+  text-align: left;
+}
+#adoption h2 {
+  text-align: left;
 }
 #adoption > div:first-of-type > div {
   background: rgba(68, 102, 0, 1);
-  width: 240px;
+  width: 250px;
   height: 40px;
   margin: 50px auto 0 auto;
 }
@@ -82,7 +87,6 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*justify-content: center;*/
   align-content: center;
   margin: 20px 0;
 }
