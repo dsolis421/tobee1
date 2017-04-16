@@ -2,9 +2,19 @@ var $petfinderAPI = 'http://api.petfinder.com/';
 var $devkey = '3c73470956892905e562a55f0e113f50';
 
 function getShelter(id) {
+  $('#searchstatus').fadeOut("fast","linear", function() {
+    $('#searchstatus').html('<h3>Getting shelter info...</h3>');
+    $('#searchstatus').fadeIn("slow","swing");
   $.getJSON($petfinderAPI + 'shelter.get?id=' + id + '&format=json&key=' + $devkey + '&callback=?')
   .done(function(shelter){
+    var shelterdetail = shelter.petfinder.shelter;
     console.log(shelter);
+    $('#shelters').fadeOut("slow","swing", function() {
+      $('#shelters').empty();
+      $('#shelters').html('<div class="shelterdetail"><h4>'+ shelterdetail.name.$t +
+      '</h4><h5>' + shelterdetail.email.$t + '</h5></div>');
+      $('#shelters').fadeIn("slow","swing");
+    });
   })
   .error(function(err) {
     console.log('Get shelter by ID error! ' + err);
