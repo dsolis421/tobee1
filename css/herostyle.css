@@ -1,3 +1,11 @@
+/*:root {
+  --primary-light: #60ad5e;
+  --primary-dark: #005005;
+  --primary: #2e7d32;
+  --secondary-light: #b5ffff;
+  --secondary-dark: #4ba2c6;
+  --secondary: #81d3f9;
+}*/
 body {
   padding-top: 40px;
   font-family: 'Trirong', Garamond;
@@ -8,15 +16,20 @@ h3 {
 }
 #rescue-nav a, #rescue-nav a:visited, #rescue-nav a:focus {
   font-size: 20px;
-  color: black;
+  color: white;
 }
 #rescue-nav a:hover {
   color: rgba(68, 102, 0, 1);
 }
 #rescue-nav {
   border: none;
-  background-color: white;
-  color: black;
+  background-color: #005005;
+  color: white;
+}
+#mode {
+  background: #4ba3c7;
+  height: 100%;
+  margin-left: 10px;
 }
 .row {
   margin: 0;
@@ -31,22 +44,23 @@ h3 {
   background-size: cover;
 }
 .insettext {
-  background-color: rgba(68, 102, 0, .5);
+  background-color: #2e7d32;
   width: 450px;
-  height: 550px;
+  height: auto;
   padding: 20px;
   color: white;
-  border: 2px solid white;
 }
 #becomehero {
-  border: 5px solid white;
+  background: #60ad5e;
   width: 200px;
+  height: 35px;
+  line-height: 35px;
   color: white;
   text-align: center;
   margin-top: 100px;
   font-size: 20px;
 }
-.insettext > p, #donate p {
+.insettext > p, #donate p, #adoption p {
   margin-top: 50px;
   font-size: 20px;
 }
@@ -56,32 +70,35 @@ h3 {
   text-align: center;
 }
 #adoption p {
-  font-size: 20px;
   text-align: left;
 }
 #adoption h2 {
   text-align: left;
 }
 #adoption > div:first-of-type > div {
-  background: rgba(68, 102, 0, 1);
-  width: 250px;
-  height: 40px;
+  background: #4ba3c7;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
   margin: 50px auto 0 auto;
 }
 #sheltersearch {
-  border: 5px solid rgba(68, 102, 0, 1);
   width: 200px;
   height: 40px;
-  color: rgba(68, 102, 0, 1);
+  color: black;
   text-align: center;
   font-size: 20px;
+  margin-top: 5px;
+  border: none;
 }
 #sheltersearchgo {
-  background: rgba(68, 102, 0, 1);
   color: white;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 20px;
   cursor: pointer;
+}
+#sheltersearch:focus {
+  outline: none;
 }
 #shelters {
   display: flex;
@@ -91,23 +108,21 @@ h3 {
   margin: 20px 0;
 }
 .shelter {
-  background: rgba(68, 102, 0, 1);
+  background: #81d4fa;
   height: auto;
   width: 300px;
   padding: 5px;
   margin: 5px auto;
-  color: white;
   border-radius: 5px;
   text-align: left;
   cursor: pointer;
 }
 .shelterdetail {
-  background: rgba(68, 102, 0, 1);
+  background: #81d4fa;
   height: auto;
   width: 80%;
   padding: 5px;
   margin: 5px auto;
-  color: white;
   border-radius: 5px;
   text-align: left;
 }
@@ -129,20 +144,26 @@ h3 {
 }
 #donate > div {
   float: right;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, .4);
-  width: 650px;
-  height: 500px;
+  background-color: #2e7d32;
+  width: 450px;
+  height: auto;
   padding: 20px;
   color: white;
 }
 #donatehero {
-  border: 5px solid white;
+  background: #60ad5e;
   width: 200px;
+  height: 35px;
   color: white;
   text-align: center;
+  line-height: 35px;
   margin-top: 50px;
   font-size: 20px;
+}
+#becomehero:hover, #donatehero:hover {
+  background: #b5ffff;
+  color: black;
+  cursor: pointer;
 }
 #bizsupport {
   height: 350px;
@@ -177,17 +198,16 @@ footer input {
   margin: 10px 0px 0px 10px;
 }
 @media screen and (max-width: 367px) {
-  #intro, #donate, #bizsupport, #foster {
+  #intro, #donate, #bizsupport, #foster, #adoption, #shelters {
     padding: 1%;
-  }
-  #adoption, #dogs, #donate {
     width: 100%;
+    height: auto;
   }
   .insettext > p, #donate p, #adoption p {
     font-size: 17px;
   }
   .insetblk, .insettext, #donate > div {
-    width: auto;
+    width: 100%;
     height: auto;
   }
   #dogs {
@@ -211,8 +231,9 @@ footer input {
     width: auto;
     height: auto;
   }
-  #adoption, #dogs, #donate {
+  #adoption, #shelters, #donate {
     width: 100%;
+    height: auto;
   }
   #donate > div {
     float: none;
